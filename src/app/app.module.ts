@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { PainelComponent } from './painel/painel.component';
+import { PainelService } from './painel/painel.service';
+import { FclrecebComponent } from './painel/fclreceb/fclreceb.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { PainelComponent } from './painel/painel.component';
     HomeComponent,
     LoginComponent,
     PainelComponent,
+    FclrecebComponent
    ],
   imports: [
     BrowserModule,
@@ -22,7 +25,9 @@ import { PainelComponent } from './painel/painel.component';
     HttpClientModule,
     routing
     ],
-  providers: [],
+  providers: [
+    PainelService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
