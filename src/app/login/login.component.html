@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+        <div class="modal-content">
+            <div class="col-12 form-input">
+                <form  #loginSenha="ngForm" (ngSubmit)="fazerLogin()">
+                    <div class="form-group">
+
+                        <!--Usuário-->
+                        <label class="col-sm-10 control-label" for="usuario">Usuário</label>
+                        <input [(ngModel)]="usuario.nome" type="text" class="form-control" id="usuario" name="usuario" placeholder="Digite seu Login ou E-mail." required>
+
+                        <div class="form-group">
+
+                            <!--Senha-->
+                            <label class="col-sm-10 control-label" for="senha">Senha</label>
+                            <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha." required>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" id="btnLogin" [disabled]="!loginSenha.valid">
+                            Login
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

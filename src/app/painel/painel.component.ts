@@ -1,4 +1,4 @@
-import { FclrecebComponent } from './../../../../formulario/front/src/app/fclreceb/fclreceb.component';
+import { FclrecebComponent } from './fclreceb/fclreceb.component';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { PainelService } from './painel.service';
 
