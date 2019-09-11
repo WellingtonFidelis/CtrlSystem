@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter  } from '@angular/core';
+import { Injectable, EventEmitter, SystemJsNgModuleLoader  } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Usuario } from 'src/app/login/usuario';
@@ -21,19 +21,18 @@ export class AuthService {
       usuario.senha === '123456') {
 
         // se o usuário for o mesmo ele está autenticado
-        this.usuarioAutenticado = true;
+        this.usuarioAutenticado = false;
         // os menus do sistema são exibidos para que o usuário autenticado possa navegar
         this.mostrarMenuEmitter.emit(true);
         // é exibido a página principal, HomeComponent
         this.router.navigate(['/']);
 
-      } else {
 
+      } else {
         // usuário não está autenticado
         this.usuarioAutenticado = false;
         // o menu não é exibido para que ele navegue
         this.mostrarMenuEmitter.emit(false);
-
       }
   }
 

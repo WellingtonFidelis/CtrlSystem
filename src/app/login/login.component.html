@@ -2,6 +2,11 @@
     <div class="col-sm-8 main-section">
         <div class="modal-content">
             <div class="col-12 form-input">
+
+                <div class="alert alert-danger" *ngIf="alertaLoginIncorreto">
+                    Login ou senha inválidos!
+                   </div>
+
                 <form  #loginSenha="ngForm" (ngSubmit)="fazerLogin()">
                     <div class="form-group">
 
