@@ -12,6 +12,9 @@ export class AuthService {
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
+  // criei a variable para saber se o login está certo ou não
+  alertaLoginIncorreto: boolean;
+
   constructor(private router: Router) { }
 
   fazerLogin(usuario: Usuario) {
@@ -33,6 +36,10 @@ export class AuthService {
         this.usuarioAutenticado = false;
         // o menu não é exibido para que ele navegue
         this.mostrarMenuEmitter.emit(false);
+        // faço o valor  ser possitivo caso o login e senha estejam incorretos
+        this.alertaLoginIncorreto = true;
+        console.log(this.alertaLoginIncorreto);
+
       }
   }
 
