@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './../../../estudos-angular/forms/src/app/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -6,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { routing } from './app.routing';
+// import { routing } from './app.routing';
 import { PainelComponent } from './painel/painel.component';
 import { PainelService } from './painel/painel.service';
 import { FclrecebComponent } from './painel/fclreceb/fclreceb.component';
@@ -23,7 +24,8 @@ import { FclrecebComponent } from './painel/fclreceb/fclreceb.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    routing
+    AppRoutingModule
+    // routing
     ],
   providers: [
     PainelService
