@@ -1,21 +1,16 @@
-import { FclrecebComponent } from './fclreceb/fclreceb.component';
-import { Component, OnInit, NgModule } from '@angular/core';
-import { PainelService } from './painel.service';
 
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-painel',
   templateUrl: './painel.component.html',
-  styleUrls: ['./painel.component.css']
+  // styleUrls: ['./painel.component.css']
 })
 export class PainelComponent implements OnInit {
 
   paineis: any [];
 
-  constructor(private painelService: PainelService) { }
-
   ngOnInit() {
-    this.paineis = this.painelService.getPaineis();
   }
 
 }

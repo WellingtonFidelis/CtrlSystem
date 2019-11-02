@@ -5,8 +5,7 @@
                 <!--Crei a div para informar quando o login ou senha estão inconretos e o *ngIf para fazer o teste da variavel-->
                 <div class="alert alert-danger" *ngIf="authService.alertaLoginIncorreto">
                     Login ou senha inválidos!
-                   </div>
-
+                </div>
                 <form  #loginSenha="ngForm" (ngSubmit)="fazerLogin()">
                     <div class="form-group">
 

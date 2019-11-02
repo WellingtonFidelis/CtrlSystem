@@ -1,35 +1,40 @@
-import { AppRoutingModule } from './app.routing.module';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-// import { routing } from './app.routing';
-import { PainelComponent } from './painel/painel.component';
-import { PainelService } from './painel/painel.service';
-import { FclrecebComponent } from './painel/fclreceb/fclreceb.component';
+import { AppRoutingModule } from 'src/app/app.routing.module';
+import { ConsultaModule } from 'src/app/consulta/consulta.module';
+import { PainelModule } from 'src/app/painel/painel.module';
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
+
+  imports: [
+    FormsModule,
+    BrowserModule,
+    HttpClientModule,
+    ConsultaModule,
+    PainelModule,
+    AppRoutingModule
+  ],
+
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    PainelComponent,
-    FclrecebComponent
-   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule
-    // routing
-    ],
-  providers: [
-    PainelService
+    LoginComponent
   ],
-  bootstrap: [AppComponent]
+
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

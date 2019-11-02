@@ -1,0 +1,64 @@
+
+
+<div class="container">
+  <div class="form">
+    <fieldset desabled>
+      <p>Id: {{ formulario?.idFormulario }}</p>
+      <div class="form-row"> <!-- Linha 1-->
+        <div class="form-group col-md-4 form-control-sm">
+          <label>Nota Fiscal</label>
+          <input placeholder="{{ formulario?.notaFiscal }}">
+          <!--<p>{{ formulario?.notaFiscal }}</p>-->
+        </div>
+        <div class="form-group col-md-4 form-control-sm">
+          <label>Data de Recebimento</label>
+          <input placeholder="{{ formulario?.dtReceb }}">
+          <!--<p>{{ formulario?.dtReceb }}</p>-->
+        </div>
+      </div>
+      <div class="form-row"> <!-- Linha 2-->
+        <div class="form-group col-md-4 form-control-sm">
+          <label>1ª OC</label>
+          <input placeholder="{{ formulario?.oc1 }}">
+          <!--<p>{{ formulario?.oc1 }}</p>-->
+        </div>
+        <div class="form-group col-md-4 form-control-sm">
+            <label>2ª OC</label>
+            <input placeholder="{{ formulario?.oc2 }}">
+            <!--<p>{{ formulario?.oc2 }}</p>-->
+        </div>
+        <div class="form-group col-md-4 form-control-sm">
+            <label>3ª OC</label>
+            <input placeholder="{{ formulario?.oc3 }}">
+            <!--<p>{{ formulario?.oc3 }}</p>-->
+        </div>
+      </div>
+      <div class="form-row"> <!-- Linha 3-->
+          <div class="form-group col-md-4 form-control-sm">
+              <label>Fornecedor</label>
+              <input placeholder="{{ formulario?.fornecedor }}">
+              <!--<p>{{ formulario?.fornecedor }}</p>-->
+          </div>
+          <div class="form-group col-md-4 form-control-sm">
+              <label>Comprador</label>
+              <input placeholder="{{ formulario?.comprador }}">
+              <!--<p>{{ formulario?.comprador }}</p>-->
+          </div>
+      </div>
+<p>{{ formulario?.conferente1 }}</p>
+<p>{{ formulario?.conferente2 }}</p>
+<p>{{ formulario?.apresCorreta }}</p>
+<p>{{ formulario?.validCorreta }}</p>
+<p>{{ formulario?.tempCorreta }}</p>
+<p>{{ formulario?.loteCorreto }}</p>
+<p>{{ formulario?.prodConservado }}</p>
+<p>{{ formulario?.concCorreta }}</p>
+<p>{{ formulario?.qtdDivergente }}</p>
+<p>{{ formulario?.valorDivergente }}</p>
+<p>{{ formulario?.prodControlado }}</p>
+<p>{{ formulario?.prodTermolabil }}</p>
+<p>{{ formulario?.status }}</p>
+<p>{{ formulario?.nConformidade }}</p>
+    </fieldset>
+  </div>
+</div>
