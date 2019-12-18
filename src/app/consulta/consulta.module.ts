@@ -1,3 +1,4 @@
+import { FormularioDeactivateGuard } from './../guards/formulario.deactivate.guard';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JwPaginationComponent } from 'jw-angular-pagination';

@@ -8,7 +8,7 @@ import { Usuario } from 'src/app/login/usuario';
 })
 export class AuthService {
 
-  private usuarioAutenticado: boolean = false;
+  private usuarioAutenticado = false;
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
@@ -20,7 +20,7 @@ export class AuthService {
   fazerLogin(usuario: Usuario) {
 
     // verifica se o usuário informado é o mesmo cadastrado
-    if(usuario.nome === 'usuario@email.com' &&
+    if (usuario.nome === 'usuario@email.com' &&
       usuario.senha === '123456') {
 
         // se o usuário for o mesmo ele está autenticado
@@ -43,8 +43,8 @@ export class AuthService {
       }
   }
 
-  //retorna se o usuário está autenticado ou não
-  usuarioEstaAutenticado(){
+  // retorna se o usuário está autenticado ou não
+  usuarioEstaAutenticado() {
     return this.usuarioAutenticado;
   }
 }
