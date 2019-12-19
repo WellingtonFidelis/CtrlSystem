@@ -1,43 +1,44 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
 
-<!-- Aqui fica o Nav-bar-->
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-  <a routerLink="" class="navbar-brand">Hospital Badim</a>
-  <!-- botão que chama os menus no toggle-->
-  <!-- tive que chamar o evento click para poder escutar e exibir os componentes do menu-->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
-    aria-label="Toggle navigation" (click)="toggleNavbar()">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <!-- O que vai ser recolhido quando em modo mobile-->
-  <div class="collapse navbar-collapse" id="navbarMenu"
-    [ngClass]="{'show': navbarOpen}">
-    <!-- inserindo os links-->
-    <ul class="navbar-nav ml-left">
-      <li *ngIf="!mostrarMenu" class="nav-item" routerLinkActive="active">
-        <a routerLink="/login" class="nav-link">Login</a>
-      </li>
-      <li *ngIf="mostrarMenu" class="nav-item" routerLinkActive="active">
-        <a routerLink="/painel" class="nav-link">Painel</a>
-      </li>
-      <li *ngIf="mostrarMenu" class="nav-item" routerLinkActive="active">
-        <a routerLink="/consulta" class="nav-link">Consulta</a>
-      </li>
-    </ul>
-
-  </div>
-     <!-- botão do menu para o Logout-->
-     <ul class="nav navbar-nav mr-auto">
+  <!-- Aqui fica o Nav-bar-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a routerLink="" class="navbar-brand">Hospital Badim</a>
+    <!-- botão que chama os menus no toggle-->
+    <!-- tive que chamar o evento click para poder escutar e exibir os componentes do menu-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+      aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- O que vai ser recolhido quando em modo mobile-->
+    <div class="collapse navbar-collapse" id="navbarMenu" [ngClass]="{'show': navbarOpen}">
+      <!-- inserindo os links-->
+      <ul class="navbar-nav ml-left">
+        <li *ngIf="!mostrarMenu" class="nav-item" routerLinkActive="active">
+          <a routerLink="/login" class="nav-link">Login</a>
+        </li>
+        <li *ngIf="mostrarMenu" class="nav-item" routerLinkActive="active">
+          <a routerLink="/painel" class="nav-link">Painel</a>
+        </li>
+        <li *ngIf="mostrarMenu" class="nav-item" routerLinkActive="active">
+          <a routerLink="/consulta" class="nav-link">Consulta</a>
+        </li>
+      </ul>
+    </div>
+    <!-- botão do menu para o Logout-->
+    <ul class="nav navbar-nav mr-auto">
       <li *ngIf="mostrarMenu" class="nav-item" routerLinkActive="active">
         <a class="nav-link">Logout</a>
       </li>
     </ul>
-</nav>
-<router-outlet></router-outlet>
+  </nav>
+  <router-outlet></router-outlet>
 </body>
+
 </html>

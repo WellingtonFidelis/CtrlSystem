@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from 'src/app/app.routing.module';
 import { ConsultaModule } from 'src/app/consulta/consulta.module';
-import { PainelModule } from 'src/app/painel/painel.module';
+// import { PainelModule } from 'src/app/painel/painel.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -19,7 +19,7 @@ import { AuthGuard } from './guards/auth.guard';
     BrowserModule,
     HttpClientModule,
     ConsultaModule,
-    PainelModule,
+    // PainelModule,
     AppRoutingModule
   ],
 
