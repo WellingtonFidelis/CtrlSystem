@@ -8,15 +8,19 @@ import { Usuario } from 'src/app/login/usuario';
 })
 export class AuthService {
 
+  // variable to authentic the user
   private usuarioAutenticado = false;
 
+  // emissor de eventos que passa para o app.component se é para mostrar o restante do menu ou não
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   // criei a variable para saber se o login está certo ou não
   alertaLoginIncorreto: boolean;
 
+  // router para direcionar o usuario para a pag home if the autenticação for true
   constructor(private router: Router) { }
 
+  // method fazerLogin gives an usuario of the type Usuario, helps too the intelisense
   fazerLogin(usuario: Usuario) {
 
     // verifica se o usuário informado é o mesmo cadastrado

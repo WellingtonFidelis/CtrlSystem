@@ -10,9 +10,10 @@ import { AuthService } from './auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  // criando a variável usuário do tipo Usuario, class criada em usuario.ts. Lembrar de importar a class usuário
   private usuario: Usuario = new Usuario();
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) { } // declaração de um serviço de autenticação do tipo AuthService
 
   ngOnInit() {
   }
