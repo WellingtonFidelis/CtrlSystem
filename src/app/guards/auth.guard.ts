@@ -13,11 +13,11 @@ export class AuthGuard implements CanActivate {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router // to do the redirection of the routers
   ) { }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
+  canActivate( // recebe alguns parameters
+    route: ActivatedRouteSnapshot, // we have the informations about of the route
     state: RouterStateSnapshot
   ): Observable<boolean> | boolean {
 
