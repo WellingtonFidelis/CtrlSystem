@@ -26,7 +26,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {useHash: true}) // add an object to put # on url
     ],
     exports: [
         RouterModule
