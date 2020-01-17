@@ -1,3 +1,4 @@
+import { FormularioDeactivateGuard } from './../../../../formulario/front/src/app/guards/formulario.deactivate.guard';
 import { PainelComponent } from './painel.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -22,7 +23,8 @@ import { AuthService } from '../login/auth.service';
     ],
 
     providers: [
-      AuthService
+      AuthService,
+      FormularioDeactivateGuard
     ]
 
 })

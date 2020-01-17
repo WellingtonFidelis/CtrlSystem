@@ -1,3 +1,5 @@
+import { PainelGuard } from './guards/painel.guard';
+import { PainelComponent } from './../../../formulario/front/src/app/painel/painel.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -31,7 +33,8 @@ import { AuthGuard } from './guards/auth.guard';
 
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    PainelGuard
   ],
   bootstrap: [
     AppComponent

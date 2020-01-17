@@ -1,6 +1,7 @@
+import { PainelGuard } from './guards/painel.guard';
 import { FormularioDeactivateGuard } from './guards/formulario.deactivate.guard';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, CanActivateChild } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -13,11 +14,13 @@ const appRoutes: Routes = [
     // 3 passo, no painel.routing.module.ts deve apagar o path para painel
     {path: 'painel',
       loadChildren: './painel/painel.module#PainelModule',
-      canActivate: [AuthGuard]
+      canActivate: [AuthGuard], // colocado CanActivate para a guarda de rotas travar o acesso sem estar logado
+      canActivateChild: [PainelGuard] /* quando canActivateChild está no app.routing.module é usando no escopo global para */
+      /* utilizar apenas nas rotas filhas deve ser declarado no path do .routing.module filho */
     },
     {path: 'login', component: LoginComponent},
     {path: '', component: HomeComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard] // colocado CanActivate para a guarda de rotas travar o acesso sem estar logado
     }
 ];
 
